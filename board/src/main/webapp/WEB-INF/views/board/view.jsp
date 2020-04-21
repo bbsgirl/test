@@ -7,17 +7,24 @@
 <title>게시물 조회</title>
 </head>
 <body>
-
+<div id="nav">
+ <%@ include file="../include/nav.jsp" %>
+</div>
 <form method = "post">
 
-<label>제목</label>
-${view.title}<br />
+<h1>
 
-<label>작성자</label>
-${view.writer}<br />
+<span>제목 : </span>${view.title}<br />
 
-<label>내용</label><br />
-${view.content}<br />
+</h1>
+
+<span>작성자 : </span> ${view.writer}
+
+<hr/>
+
+<span>내용 : </span>${view.content}<br />
+
+<hr />
 
 <div>
 <a href="/board/modify?bno=${view.bno}">게시물 수정</a>,<a href="/board/delete?bno=${view.bno}">게시물 삭제</a>
